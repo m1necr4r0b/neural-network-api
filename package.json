@@ -1,0 +1,20 @@
+{
+  "name": "neural-network-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m1necr4r0b/neural-network-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m1necr4r0b/neural-network-api/issues"
+  },
+  "homepage": "https://github.com/m1necr4r0b/neural-network-api#readme"
+}
