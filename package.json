@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/m1necr4r0b/neural-network-api/issues"
   },
-  "homepage": "https://github.com/m1necr4r0b/neural-network-api#readme"
+  "homepage": "https://github.com/m1necr4r0b/neural-network-api#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
 }
