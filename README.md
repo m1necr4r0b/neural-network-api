@@ -1,3 +1,3 @@
 # neural-network-api
 
-welcome everyone welcome, this is a ub api thank you..
+an API built for making AI in UB
