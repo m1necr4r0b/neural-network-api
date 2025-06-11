@@ -1,3 +1,3 @@
-# neural-network-api
+# Neural API
 
-an API built for making AI in UB
+an API built for making Neural Networks
