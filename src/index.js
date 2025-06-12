@@ -15,7 +15,9 @@ const trainingData = JSON.parse(data);
 
 /* making a new neural network and training it with the data */
 const network = new brain.NeuralNetwork();
-network.train(trainingData);
+network.train(trainingData, {
+    log: true
+});
 
 /* creating the first API endpoint */
 app.get('/', (req, res) => {
@@ -45,7 +47,7 @@ app.get('/run', (req, res) => {
 app.get('/save', (req, res) => {
     // converts the entire neural network to JSON and then saves it
     const savedNetwork = network.toJSON()
-    fs.writeFile('./src/savedNetwork.json', JSON.stringify(savedNetwork), 'utf-8', (err) => {
+    fs.writeFile('./src/NeuralNetwork.json', JSON.stringify(savedNetwork), 'utf-8', (err) => {
         if (err) {
             // if the file somehow fails to save
             console.error(err);
@@ -56,6 +58,16 @@ app.get('/save', (req, res) => {
         res.send('successfully saved neural network');
         return
     })
+});
+
+/* creating the /get endpoints for training data and neural network */
+app.get('/getTrainingData', (req, res) => {
+    const data = fs.readFileSync('./src/trainingData.json', 'utf-8');
+    res.send(JSON.parse(data))
+});
+app.get('/getNeuralNetwork', (req, res) => {
+    const data = fs.readFileSync('./src/NeuralNetwork.json', 'utf-8');
+    res.send(JSON.parse(data))
 });
 
 /* and we launch the host server */
